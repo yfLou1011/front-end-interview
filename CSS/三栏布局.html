@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>三栏布局</title>
+</head>
+<style type="text/css">
+	.box {
+		height: 200px;
+		display: flex;
+	}
+
+	.box > div {
+	  	height: 100%;
+	}
+
+	/* 1. float */
+	/*.box-left {
+		float: left;
+		width: 200px;
+		background-color: red;
+	}
+
+	.box-center {
+		margin-left: 0;
+		background-color: green;
+	}
+
+	.box-right {
+		float: right;
+		width: 200px;
+		background-color: blue;
+	}*/
+
+	/* 2. absolute */
+	/*.box-left {
+		position: absolute;
+		left: 0;
+		width: 200px;
+		background-color: red;
+	}
+
+	.box-center {
+		position: absolute;
+		left: 200px;
+		right: 200px;
+		background-color: green;
+	}
+
+	.box-right {
+		position: absolute;
+		right: 0;
+		width: 200px;
+		background-color: blue;
+	}*/
+
+	/* 3. flex */
+/*	.box-left {
+		width: 200px;
+		background-color: red;
+	}
+
+	.box-center {
+		flex-grow: 1;
+    	flex-shrink: 1;
+		background-color: green;
+	}
+
+	.box-right {
+		width: 200px;
+		background-color: blue;
+	}*/
+</style>
+<body>
+	<div class="box">
+	  <div class="box-left"></div>
+	  <div class="box-center"></div>
+	  <div class="box-right"></div>
+	</div>
+</body>
+</html>
