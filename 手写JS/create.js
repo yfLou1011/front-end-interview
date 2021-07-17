@@ -27,7 +27,7 @@ let myObj = Object.myCreate(null, {
         enumerable: true
     },
     job: {
-        value: 'Singer-Songwritter'
+        value: 'Singer-Songwriter'
     }
 })
 console.log(myObj)

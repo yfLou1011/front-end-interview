@@ -1,4 +1,4 @@
-function myInstanceOf(left, right){
+function myInstanceof(left, right){
     let protoType = right.prototype
     let proto = left.__proto__
     while(true){
@@ -8,4 +8,4 @@ function myInstanceOf(left, right){
     }
 }
 let str = new String('aa')
-myInstanceOf(str, String)		// true
+myInstanceof(str, String)		// true
