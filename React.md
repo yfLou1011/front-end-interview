@@ -37,10 +37,12 @@ Vue 和 React 有什么不同 -->
    1. componentWillUnmount
 ***
 
-## React 中的 setState 为什么需要异步操作？
-- 为了保持一致性；因为props是异步的，父组件re-render的时候，传入子组件的props才发生变化
-- 因此为了保持一致，state也不直接更新，在flush的时候才更新
-- 将state的更新延缓到最后**批量合并**再去渲染对于应用的**性能优化**是有极大好处
+## React 中的 setState 为什么需要异步操作？	[link](https://ithelp.ithome.com.tw/articles/10257993)
+1. React會先等「該次event會觸發的所有event handler」都執行完後，再去更新state，並一次判斷哪些元件要被重新渲染。這個機制稱為「batching」
+2. 確保Internal Consistency
+	- 为了保持一致性；父组件re-render的时候，传入子组件的props才发生变化 -> props是异步的
+	- 因此为了保持一致，state也不直接更新，在flush的时候才更新
+	- 将state的更新延缓到最后**批量合并**再去渲染对于应用的**性能优化**是有极大好处
 
 ## setState什么时候是异步的？
 - 在setTimeout和js原生事件中: 
