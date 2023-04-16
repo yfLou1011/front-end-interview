@@ -311,6 +311,16 @@ constructor(props) {
    - Context 设计目的是为了共享那些对于一个组件树而言是“全局”的数据
    - 
 
+## setState的同步与异步
+1. executionContext字段判断同步还是异步，默认是noContext，既同步
+2. React处理异步事件的时候，调用了batchedEventUpdates(fn)进行拦截
+3. 在此方法中，executionContext被改成了eventContext，既异步
+4. 方法结束之后，executionContext恢复noContext
+### 为什么setTimeout中的setState难以实现异步
+1. 从 setTimeout 执行的异步代码是没有设置 executionContext 的，那就会走到 NoContext 的分支，会立刻渲染
+2. 解决方法：在外层用unsafed_batchUpdate函数包裹，手动切换到批量更新模式
+
+
 ## React合成事件和原生事件区别
 
 ## React如何性能优化

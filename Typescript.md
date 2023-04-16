@@ -52,3 +52,14 @@ let list: Array<number> = [1, 2, 3]; // Array<number>泛型语法
 
 ## 在进行项目选型时，什么因素会让你选择 TypeScript 
 
+## TS（https://juejin.cn/post/7031787942691471396）
+    * 基础类型：String、Number、Boolean、Null、Undefined、数组、元组、Enum（枚举）
+    * any、unknown、void、never、Object、类型断言（非空断言！）、类型推论、类型别名
+    * 高级类型：联合类型（Union Type）、交叉类型（）、
+    * function：入参与结果的类型、可选参数、默认参数、函数重载
+    * 接口（interface）：
+    * 泛型：泛型约束
+    * 内置工具类型：
+        * Exclude<T,U>，Extract<T,U>，
+        * Particle<T>，Readonly，
+        * Pick<T,P>，Record<K,T>，Omit<K,T>，

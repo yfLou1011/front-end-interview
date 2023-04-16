@@ -161,8 +161,9 @@
   - CommonJs (同步、Node.js)
     - module、exports、require、global
   - AMD (异步、RequireJS)
-  - CMD (同步、SeaJS)
-    - 与AMD很类似, 不同点在于: AMD 推崇依赖前置、提前执行, CMD推崇依赖就近、延迟执行
+    - 推崇依赖前置、提前执行，加载完立即执行，因此加载顺序和书写顺序不一致（但是主逻辑一定在所有依赖加载完成后才执行）
+  - CMD (异步、SeaJS)
+    - 推崇依赖就近、延迟执行，所有依赖模块加载完成后进入主逻辑，因此加载顺序和书写顺序一致
     ```javascript
       /** AMD写法 **/
       define(["a", "b", "c", "d", "e", "f"], function(a, b, c, d, e, f) { 

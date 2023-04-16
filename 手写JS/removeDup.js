@@ -1,13 +1,13 @@
 // 利用obj的key唯一性
 function removeDup1(arr) {
-    let new_obj = {}, new_arr = []
-    for(let i = 0; i < arr.length; i++){
-        if(!new_obj[arr[i]]){
-            new_arr.push(arr[i])
-            new_obj[arr[i]] = 1
-        }
-    }
-    return new_arr
+    let new_obj = {}, new_arr = []
+    for(let i = 0; i < arr.length; i++){
+        if(!new_obj[arr[i]]){
+            new_arr.push(arr[i])
+            new_obj[arr[i]] = 1
+        }
+    }
+    return new_arr
 }
 
 // indexOf
